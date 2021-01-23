@@ -9,13 +9,12 @@ if (mysqli_connect_errno()) {
 
 session_start();
 // ob_start();
-$pathe_confi = "/Users/nehadalaa/Sites/php-eCommerce/admin/product/conif.php";
-// require_once($pathe_confi);
-// $path_herFull = "/Users/nehadalaa/Sites/php-eCommerce/admin/includes/herlFull.php";
-// require_once($path_herFull);
-define('CART_COOKIE', 'SBwi72UCklwiqzz2');
-define('CART_COOKIE_EXPIRE', time() + (86400 * 30));
-define('TAXRATE', 0.25);
+require __DIR__ . '/../config.php';
+require __DIR__ . '/../vendor/autoload.php';
+// define('CART_COOKIE', 'SBwi72UCklwiqzz2');
+// define('CART_COOKIE_EXPIRE', time() + (86400 * 30));
+// define('TAXRATE', 0.25);
+
 
 
 

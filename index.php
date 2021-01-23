@@ -36,7 +36,7 @@ define('BASEURL', '/~nehadalaa/php-eCommerce/');
                             <p class="list-price text-danger">List Price <s>$<?= $product['list_price']; ?></s></p>
                             <p class="price"> Our Price: $<?= $product['price']; ?></p>
 
-                            <button type="button" class="btn btn-success btn-sm" id="details-model" onclick="detailsModel(<?= $product['id']; ?>)">Detalis</button>
+                            <button type="button" class="btn btn-success btn-sm ml-4" id="details-model" onclick="detailsModel(<?= $product['id']; ?>)">Detalis</button>
                         </div>
                 <?php endwhile;
                 }  ?>

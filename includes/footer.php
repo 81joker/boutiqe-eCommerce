@@ -5,7 +5,7 @@
 <div class="text-center" id="footer">&copy; Copyright2020-2012 Shaunta's Boutique </div>
 
 <?php
-define('BASEURL', '/~nehadalaa/php-eCommerce/');
+// define('BASEURL', '/~nehadalaa/php-eCommerce/');
 ?>
 <script>
     // var baseurl = window.location.origin+window.location.pathname;

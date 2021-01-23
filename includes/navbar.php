@@ -20,13 +20,13 @@ if ($pquery->num_rows > 0) {
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item ml-5"><a href="index.php" class="nav-link" style="font-size: 20px;font-family:itlice;">Home</li></a>
+        <li class="nav-item "><a href="index.php" class="nav-link" style="font-size: 20px;font-family:itlice; margin-left:150px; margin-right:30px">Home</li></a>
         <?php
 
         while ($pquer = $pquery->fetch_assoc()) : ?>
 
 
-          <li class="nav-item dropdown ml-5">
+          <li class="nav-item dropdown ml-4">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
               <?php

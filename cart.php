@@ -269,6 +269,44 @@ if ($cart_id != '') {
             }
         })
     }
+
+    Stripe.setPublishablekey('<?= STRIPE_PUBLIC; ?>');
+
+    function stripeRersponseHandler() {
+        $('#payment-form');
+        if (response.error) {
+            //Show the errors on the form 
+            $form.find('#payment-errors').text(response.error.message);
+            $form.find('button').prop('disabled', true);
+
+
+        } else {
+            //response containes id and card wich containes additional card detailes 
+            var tokan = response.id;
+            // Insert the token into the form so it gets submit to the server 
+            $form.append($('<input type="hidden" name="stripeToken" >').val(tokan));
+            //submit
+            $form.get(0).submit();
+
+        }
+
+    }
+
+
+    jQuery(function($) {
+        $('#payment-form').submit(function(event) {
+            var $form = $(this);
+
+            //Disable the submit Button to prevent repated Clicks
+            $form.find('button').prop('disabled', true);
+
+            Srripe.card.createToken($form, stripeRersponseHandler);
+
+            //Prevent the form form submitting withe default action 
+            return false;
+
+        });
+    });
 </script>
 <!-- Footer -->
 <?php require_once("includes/footer.php");   ?>
